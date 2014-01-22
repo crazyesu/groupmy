@@ -1,0 +1,19 @@
+.span12
+  = link_to("New group", new_group_path , :class => "btn btn-mini btn-primary pull-right" )
+
+%table
+  %thead
+    %tr
+      %td= "#"
+      %td= "Title"
+      %td= "Descroption"
+
+  %tbody
+    - @groups.each do |group|
+      %tr
+        %td= "#"
+        %td= link_to(group.title, group_path(group))
+        %td= group.description
+        %td
+          = link_to("Edit", edit_group_path(group), :class => "btn btn-mini")
+          = link_to("Delete", group_path(group), :class => "btn btn-mini", :method => :delete, :confirm => "Are you sure?")

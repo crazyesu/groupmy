@@ -1,0 +1,6 @@
+.span12
+  = form_for @group do |f|
+    = f.text_field :title, :input_html => { :class => "input-xxlarge"}
+    = f.text_field :deccription, :input_html => { :class => "input-xxlarge"}
+    .form-actions
+      = f.submit "Submit", :disable_with => 'Submiting...', :class => "btn btn primary"
