@@ -1,5 +1,6 @@
 Groupmy::Application.routes.draw do
-  root :to => "pages#welcome"
+  # root :to => "pages#welcome"
+  root :to => "groups#index"
 
   resources :groups
 
